@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drink</title>
+  <style>
+    body{
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 30px;
+      color: black; 
+      margin: 0;
+      padding: 0;
+      background-image: url(cerveja.jpg);
+      background-size: 350px; 
+    }
+      #Click-Menu {
+        text-align: center;
+        text-shadow: 
+               -1px -1px 0px #FFF, 
+               -1px 1px 0px #FFF,                    
+                1px -1px 0px #FFF,                  
+                1px 0px 0px #FFF;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="Click-Menu">
+      <h1>Drinks bebidos</h1>
+      <p id="contador">Nehum</p>
+      <button onclick="subtrai()">Errei a conta</button>
+      <button onclick="soma()">Tomei um</button>
+  </div>
+
+  <script>
+  //contador
+
+  let numero = 0
+  
+  function mostrador(){
+    const p = document.querySelector("#contador")
+    p.innerText = numero
+  }  
+
+  //buttons
+  function subtrai(){
+    numero = numero -1
+    mostrador()
+  }
+  function soma(){
+    numero = numero +1
+    mostrador()
+  }
+
+</script>
+</body>
+</html>
